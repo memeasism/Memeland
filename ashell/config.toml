@@ -1,0 +1,17 @@
+# Basic settings
+log_level = "warn"
+outputs = "All"
+position = "Top"
+
+# Appearance settings
+[appearance]
+background = "#24273a"
+foreground = "#cad3f5"
+border_color = "#8892f0"
+border_width = 1
+style = "Solid"
+
+# Module layout
+[modules]
+left = ["Workspaces"]
+right = ["Clock", "Tray", "Settings"]
