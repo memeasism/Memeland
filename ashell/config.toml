@@ -1,17 +1,22 @@
-# Basic settings
 log_level = "warn"
 outputs = "All"
 position = "Top"
 
-# Appearance settings
 [appearance]
-background = "#24273a"
-foreground = "#cad3f5"
-border_color = "#8892f0"
-border_width = 1
-style = "Solid"
+font_name = "Unispace"
+scale_factor = 1.25
+style = "Islands"
+opacity = 1
+background_color = "#E53B44"
+primary_color = "#686868"
+secondary_color = "#282828"
+text_color = "#000000"
+workspace_colors = ["#C0C0C0", "#C0C0C0"]
 
-# Module layout
+[workspaces]
+visibility_mode = "MonitorSpecific"
+
 [modules]
 left = ["Workspaces"]
+center = ["SystemInfo"]
 right = ["Clock", "Tray", "Settings"]
