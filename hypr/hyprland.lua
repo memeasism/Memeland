@@ -68,7 +68,7 @@ local screenshot = "flameshot gui"
 
 local display = "kitty hyprmoncfg"
 
-local store = "shelly"
+local store = "shelly-ui"
 
 --################
 
@@ -368,33 +368,33 @@ local mainMod = "SUPER"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Binds/ for more
 
-hl.bind(mainMod .. " + " .. "T", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + " .. "T", hl.dsp.exec_cmd(terminal))
 
-hl.bind(mainMod .. " + " .. "W", hl.dsp.exec_cmd("zen-browser"))
+hl.bind(mainMod .. " + " .. "W", hl.dsp.exec_cmd(browser))
 
-hl.bind(mainMod .. " + " .. "A", hl.dsp.exec_cmd("pwvucontrol"))
+hl.bind(mainMod .. " + " .. "A", hl.dsp.exec_cmd(audiomanager))
 
-hl.bind(mainMod .. " + " .. "V", hl.dsp.exec_cmd("virt-manager"))
+hl.bind(mainMod .. " + " .. "V", hl.dsp.exec_cmd(virt))
 
-hl.bind(mainMod .. " + " .. "C", hl.dsp.exec_cmd("kitty nvim"))
+hl.bind(mainMod .. " + " .. "C", hl.dsp.exec_cmd(code))
 
-hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("/opt/resolve/bin/resolve"))
+hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd(editor))
 
-hl.bind("PRINT", hl.dsp.exec_cmd("flameshot gui"))
+hl.bind("PRINT", hl.dsp.exec_cmd(screenshot))
 
 hl.bind(mainMod .. " + " .. "Q", hl.dsp.window.close())
 
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "Q", hl.dsp.exit())
 
-hl.bind(mainMod .. " + " .. "F", hl.dsp.exec_cmd("kitty vifm"))
+hl.bind(mainMod .. " + " .. "F", hl.dsp.exec_cmd(fileManager))
 
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "SPACE", hl.dsp.window.float())
 
-hl.bind(mainMod .. " + " .. "D", hl.dsp.exec_cmd("kitty hyprmoncfg"))
+hl.bind(mainMod .. " + " .. "D", hl.dsp.exec_cmd(display))
 
-hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("yofi binapps"))
+hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd(menu))
 
-hl.bind(mainMod .. " + " .. "P", hl.dsp.exec_cmd("shelly"))
+hl.bind(mainMod .. " + " .. "P", hl.dsp.exec_cmd(store))
 
 -- Move focus with mainMod + arrow keys
 
@@ -496,7 +496,7 @@ hl.window_rule({
 -- Autostart
 hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpm reload -n")
-    hl.exec_cmd("ashell & hyprpaper & hypridle")
+    hl.exec_cmd("ashell & hyprpaper & hypridle & /usr/lib/hyprpolkitagent/hyprpolkitagent")
 end)
 
 -- Exec (run every reload)
